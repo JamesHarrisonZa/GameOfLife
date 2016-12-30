@@ -32,7 +32,7 @@ public class Tile : MonoBehaviour
 
 	void OnMouseDown()
 	{
-		if(!IsGameRunning())
+		if (!IsGameRunning())
 			ChangeState();
 	}
 
@@ -42,19 +42,21 @@ public class Tile : MonoBehaviour
 			ChangeState();
 	}
 
+	// Custom Public Methods
+
+	public void ChangeState()
+	{
+		IsActive = !IsActive; //Inverting state for now.
+		ChangeColour();
+	}
+
 	// Private Methods
 
 	bool IsGameRunning()
 	{
 		return _startButton.IsGameRunning;
 	}
-
-	void ChangeState()
-	{
-		IsActive = !IsActive; //Inverting state for now.
-		ChangeColour();
-	}
-
+	
 	void ChangeColour()
 	{
 		_renderer.material.color = IsActive ? Color.green : Color.black;
