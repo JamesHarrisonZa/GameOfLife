@@ -9,6 +9,7 @@ public class Tile : MonoBehaviour
 	// Private fields
 
 	Renderer _renderer;
+	StartButton _startButton;
 
 	// Event Methods
 
@@ -17,10 +18,13 @@ public class Tile : MonoBehaviour
 	{
 		_renderer = GetComponent<Renderer>();
 		_renderer.material.color = Color.black;
+		_startButton = GameObject
+			.Find("StartButton") //as its named in Unity
+			.GetComponent<StartButton>(); //Script version
 		IsActive = false;
 	}
 
-	//Called every few milliseconds
+	//Called every frame update.
 	void Update()
 	{
 
@@ -42,11 +46,7 @@ public class Tile : MonoBehaviour
 
 	bool IsGameRunning()
 	{
-		var startButton = GameObject
-			.Find("StartButton") //as its named in Unity
-			.GetComponent<StartButton>(); //Script version
-
-		return startButton.IsGameRunning;
+		return _startButton.IsGameRunning;
 	}
 
 	void ChangeState()

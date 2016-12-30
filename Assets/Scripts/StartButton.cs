@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 public class StartButton : MonoBehaviour {
 
@@ -7,9 +6,15 @@ public class StartButton : MonoBehaviour {
 
 	public bool IsGameRunning;
 
+	// Private Fields
+
+	GeneratedMap _generatedMap;
+
 	// Use this for initialization
 	void Start () {
-	
+
+		_generatedMap = GameObject.Find("Map").GetComponent<GeneratedMap>();
+		IsGameRunning = false;
 	}
 	
 	// Update is called once per frame
@@ -20,7 +25,10 @@ public class StartButton : MonoBehaviour {
 	//Custom method Accessed by Unity component
 	public void OnClick()
 	{
-		print("Start Button Clicked");
+		if (IsGameRunning)
+			return;
+
+		_generatedMap.StartGameOfLife();
 		IsGameRunning = true;
 	}
 }

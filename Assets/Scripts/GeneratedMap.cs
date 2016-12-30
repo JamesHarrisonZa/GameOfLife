@@ -11,16 +11,27 @@ public class GeneratedMap : MonoBehaviour
 	// Private fields
 
 	const string HolderName = "Generated Map";
+	const float UpdateInterval = 1.0f; //Seconds //ToDo: Public Slider for speed
 
 	// Event Methods
 
+	//Called Once at the start
 	void Start()
 	{
 		GenerateMap();
 	}
 
+	//Called every frame update.
 	void Update()
 	{
+
+	}
+
+	// Custom Public Methods
+
+	public void StartGameOfLife()
+	{
+		InvokeRepeating("UpdateGameOfLife", UpdateInterval, UpdateInterval);
 	}
 
 	// Private Methods
@@ -44,5 +55,10 @@ public class GeneratedMap : MonoBehaviour
 				newTile.parent = mapHolder;
 			}
 		}
+	}
+
+	public void UpdateGameOfLife()
+	{
+		print("Update Tile Collection");
 	}
 }
