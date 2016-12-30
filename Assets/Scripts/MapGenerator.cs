@@ -30,6 +30,7 @@ public class MapGenerator : MonoBehaviour
 		if (transform.FindChild(HolderName))
 			DestroyImmediate(transform.FindChild(HolderName).gameObject);
 
+		//Nests the generated tiles under the Map in Unity Hierarchy
 		var mapHolder = new GameObject(HolderName).transform;
 		mapHolder.parent = transform;
 

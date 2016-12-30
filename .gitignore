@@ -243,3 +243,7 @@ ModelManifest.xml
 /Temp/__Backupscenes
 /Temp/UnityLockfile
 /Temp
+/Builds
+/Library/il2cpp_cache
+/Library/ShaderCache
+/Library/metadata/73

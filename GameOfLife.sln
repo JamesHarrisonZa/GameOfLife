@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLife.CSharp", "GameOfLife.CSharp.csproj", "{BD88A3CE-EAAA-3756-E321-764CBB070513}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLife", "GameOfLife.csproj", "{1149F081-285C-24C8-5DDD-2BF8DE4A29CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BD88A3CE-EAAA-3756-E321-764CBB070513}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD88A3CE-EAAA-3756-E321-764CBB070513}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD88A3CE-EAAA-3756-E321-764CBB070513}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD88A3CE-EAAA-3756-E321-764CBB070513}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1149F081-285C-24C8-5DDD-2BF8DE4A29CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1149F081-285C-24C8-5DDD-2BF8DE4A29CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1149F081-285C-24C8-5DDD-2BF8DE4A29CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1149F081-285C-24C8-5DDD-2BF8DE4A29CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(CodealikeProperties) = postSolution
-		SolutionGuid = 0bd9e71c-69bb-45ef-8fcd-8b1f719d7314
+		SolutionGuid = 8232db6e-2c84-4f9f-8198-3f3f20a2a926
 	EndGlobalSection
 EndGlobal
