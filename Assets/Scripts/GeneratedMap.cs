@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-public class MapGenerator : MonoBehaviour
+public class GeneratedMap : MonoBehaviour
 {
 	// Properties available to Unity IDE
 
