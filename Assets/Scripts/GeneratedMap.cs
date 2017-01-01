@@ -14,7 +14,7 @@ public class GeneratedMap : MonoBehaviour
 	// Private fields
 
 	const string HolderName = "Generated Map";
-	const float UpdateInterval = 0.2f; //Seconds //ToDo: Public Slider for speed
+	const float UpdateInterval = 0.2f; //Seconds //ToDo: potential UI Slider for speed
 	private Tile[,] _tiles;
 
 	// Event Methods

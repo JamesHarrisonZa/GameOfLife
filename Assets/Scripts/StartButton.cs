@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StartButton : MonoBehaviour {
 
@@ -25,10 +27,17 @@ public class StartButton : MonoBehaviour {
 	//Custom method Accessed by Unity component
 	public void OnClick()
 	{
-		if (IsGameRunning)
-			return;
-
-		_generatedMap.StartGameOfLife();
-		IsGameRunning = true;
+		if (!IsGameRunning)
+		{
+			//Start Game
+			IsGameRunning = true;
+			_generatedMap.StartGameOfLife();
+			gameObject.GetComponentInChildren<Text>().text = "Reset";
+		}
+		else
+		{
+			//Reset Game
+			SceneManager.LoadScene("GeneratedMapScene");
+		}
 	}
 }
