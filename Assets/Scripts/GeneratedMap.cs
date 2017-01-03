@@ -8,6 +8,7 @@ public class GeneratedMap : MonoBehaviour
 
 	public Transform TilePrefab;
 	public Vector2 MapSize; //Note we are assuming x,y will be int values
+	public float TileSize;
 	[Range(0, 1)]
 	public float OutLinePercent;
 
@@ -22,8 +23,7 @@ public class GeneratedMap : MonoBehaviour
 	//Called Once at the start
 	void Start()
 	{
-		_tiles = new Tile[(int)MapSize.x, (int)MapSize.y];
-		GenerateMap();
+		Initialize();
 	}
 
 	//Called every frame update.
@@ -33,6 +33,12 @@ public class GeneratedMap : MonoBehaviour
 	}
 
 	// Custom Public Methods
+
+	public void Initialize()
+	{
+		_tiles = new Tile[(int)MapSize.x, (int)MapSize.y];
+		GenerateMap();
+	}
 
 	public void StartGameOfLife()
 	{
@@ -57,7 +63,7 @@ public class GeneratedMap : MonoBehaviour
 				var tilePosition = new Vector3(-MapSize.x / 2 + 0.5f + x, -MapSize.y / 2 + 0.5f + y, 0);
 
 				var newTilePrefab = Instantiate(TilePrefab, tilePosition, Quaternion.identity) as Transform;
-				newTilePrefab.localScale = Vector3.one * (1 - OutLinePercent);
+				newTilePrefab.localScale = Vector3.one * (1 - OutLinePercent) * TileSize;
 				newTilePrefab.parent = mapHolder;
 
 				var tile = newTilePrefab.gameObject.GetComponent<Tile>();

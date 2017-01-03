@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLife", "GameOfLife.csproj", "{1149F081-285C-24C8-5DDD-2BF8DE4A29CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLife.Editor", "GameOfLife.Editor.csproj", "{D9C1D514-132D-7C48-6C9A-03BFA9C2F311}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,11 +15,12 @@ Global
 		{1149F081-285C-24C8-5DDD-2BF8DE4A29CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1149F081-285C-24C8-5DDD-2BF8DE4A29CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1149F081-285C-24C8-5DDD-2BF8DE4A29CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9C1D514-132D-7C48-6C9A-03BFA9C2F311}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9C1D514-132D-7C48-6C9A-03BFA9C2F311}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9C1D514-132D-7C48-6C9A-03BFA9C2F311}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9C1D514-132D-7C48-6C9A-03BFA9C2F311}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(CodealikeProperties) = postSolution
-		SolutionGuid = 5ac17f0e-a070-452c-9307-c8d1bd6d8247
 	EndGlobalSection
 EndGlobal
